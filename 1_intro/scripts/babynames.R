@@ -1,4 +1,4 @@
-library(tidyverse) ; library(babynames) ; library(hrbrthemes)
+library(tidyverse) ; library(babynames) 
 
 babynames %>%
   filter(name == "Mabel") %>%
@@ -11,6 +11,6 @@ babynames %>%
        y = "Frequency",
        caption = "Source: Social Security Administration",
        color = "") +
-  theme_ipsum_rc(grid = "Y") +
+  theme_minimal() +
   theme(legend.position = "top")
 ggsave("baby_plot.png", scale=1, dpi=300)
